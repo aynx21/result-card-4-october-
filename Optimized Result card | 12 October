@@ -1,0 +1,109 @@
+#include <iostream>
+using namespace std;
+
+int
+main ()
+{ 
+  string naam, fathernaam ;
+  float marks, subject1, sub2, sub3, sub4, sub5, totalmarks = 500,
+    obtainmarks, averagemarks, studentID, sum, percentage, percent;
+
+
+  cout << " Please enter your studentID___: ";
+  cin >> studentID;
+
+  if (studentID == 1234)
+    {
+      cout << " || You are permitted || \n ";
+
+      cout << " Please enter your name__:";
+      cin >> naam;
+      cout << " Please enter your father's name__:";
+      cin >> fathernaam;
+      cout << " Please enter your marks in Maths (out of 100)__: ";
+      cin >> subject1;
+      cout << " Please enter your marks in physics (out of 100)__: ";
+      cin >> sub2;
+      cout << " Please enter your marks in Biology (out of 100)__: ";
+      cin >> sub3;
+      cout << " Please enter your marks in Computer Science (out of 100)__: ";
+      cin >> sub4;
+      cout << " Please enter your marks in Chemistry (out of 100)__: ";
+      cin >> sub5;
+
+      sum = subject1 + sub2 + sub3 + sub4 + sub5;
+      cout << "*| Your total marks are___ " << sum << " *| \n" ;
+
+      percentage = (sum / totalmarks);
+      percent = percentage * 100;
+
+      cout << "*| Your percentage is ___:" << percent << " *| \n\n\n\n"; 
+
+      // now grading
+
+
+    
+      // final result card 
+      cout << "  || Good day "<<naam<<" Here is your Result || \n\n";
+      cout << "  |^| Candidate Name is " << naam << " |^| \n";
+
+      cout << "  || Candidate fathername is " << fathernaam<<" || \n\n";
+
+      cout << "  || Candidate ID is 1234 || \n ";
+
+      cout << "  ||  The total marks in maths are " << subject1
+      <<" || \n ";
+
+      cout << "  ||  The total marks in physics are " << sub2
+      <<" ||  \n";
+
+      cout << "  ||  The total marks in Chemistry are " << sub5
+      <<" ||  \n";
+
+      cout << "  ||  The total marks in Biology are " << sub3
+      <<" ||   \n";
+
+      cout << "  ||  The total marks in Computer Science are " << sub4 <<" ||  \n";
+
+      cout << "  |*| The overall numbers were 500 |*| \n " ;
+
+      cout << "  ||  You got " << sum << " || \n ";
+
+      cout << "  |^| It makes your percentage % " << percent <<
+      " |^|  \n";
+      
+  if (sum >= 400)
+	{
+	  cout << "Grade A+ \n";
+	}
+      else if (sum >= 350 && sum <= 400)
+	{
+	  cout << "Grade A \n";
+	}
+      else if (sum >= 300 && sum <= 350)
+	{
+	  cout << " Grade B \n";
+	}
+
+      else if (sum >= 250 && sum <= 300)
+	{
+	  cout << " Grade C \n";
+	}
+      else
+	{
+	  cout << " *|FAIL|* \n ^|Better luck next time|^ ";
+	}
+     
+     
+      cout << " || Congratulations " << naam << " || ";
+
+
+
+    }
+
+  else
+    {
+      cout << " *|* Please enter the correct ID *|* \n";
+    }
+
+}
